@@ -1,0 +1,3 @@
+/mnt/c/Users/brandon wheeless/Documents/GitHub/K-Dimensional-Tree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/brandon wheeless/Documents/GitHub/K-Dimensional-Tree/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/brandon wheeless/Documents/GitHub/K-Dimensional-Tree/cmake-build-debug/CMakeFiles/K_Dimensional_Tree.dir

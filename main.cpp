@@ -228,13 +228,14 @@ int main()
 
     for (int i=0; i<n; i++){
         root = insert(root, points[i]);
-        if(i )
     }
     // Delet (30, 40);
+    struct Node *origRoot = NULL;
+    origRoot = root;
     root = deleteNode(root, points[0]);
 
-    cout << "Root after deletion of (30, 40)\n";
-    cout << root->point[0] << ", " << root->point[1] <<"," << root->point1[3] << endl;
+    cout << "Root after deletion of (" << point2[0] <<"," << point2[1] <<"," << point1[2] << ")\n";
+    cout << root->point[0] << "," << root->point[1] <<"," << root->point[3] << endl;
 
     return 0;
 }

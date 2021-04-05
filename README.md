@@ -8,3 +8,12 @@ It is important to note that this data structure is a barebone implementation an
 
 
 A K-Dimensional Tree (also known as K-D Tree) is a space-partitioning data structure for organizing points in a K-Dimensional space. This data structure acts similar to a binary search tree with each node representing data in the multi dimensional space.
+
+
+# What is happening in the tests?
+The tests are a way to test if the multi-dimensionality of the K-Dimensional Tree is holding up. \
+In the test code we test:
+1. Multi-dimensionality of the K-Dimensional Tree
+2. Finding the minimum point in the K-D Tree
+3. Using the search function to find a point in the K-D Tree and a point not in the K-D Tree
+4. The deletion of a point in the K-D Tree

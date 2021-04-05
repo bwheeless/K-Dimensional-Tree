@@ -1,12 +1,12 @@
 //a combination of https://www.geeksforgeeks.org/k-dimensional-tree-set-3-delete/ and https://www.geeksforgeeks.org/k-dimensional-tree/
 
-//The following program implements a K-dimensional Tree and runs a small test to see how it works with basic functionality. 
+//The following program implements a K-dimensional Tree and runs a small test to see how it works with basic functionality.
 
 // A C++ program to demonstrate operations of KD tree
 #include<bits/stdc++.h>
 using namespace std;
 
-const int k = 2;
+const int k = 3;
 
 // A structure to represent node of kd tree
 struct Node
@@ -212,28 +212,29 @@ Node* deleteNode(Node *root, int point[])
 int main()
 {
     struct Node *root = NULL;
-    int points[][k] = {{3, 6}, {17, 15}, {13, 15}, {6, 12},
-                       {9, 1}, {2, 7}, {10, 19}};
+    int points[][k] = {{3, 6, 4}, {17, 15, 2}, {13, 15, 7}, {6, 12, 8},
+                       {9, 1, 1}, {2, 7, 4}, {10, 19, 5}};
 
     int n = sizeof(points)/sizeof(points[0]);
 
     for (int i=0; i<n; i++)
         root = insert(root, points[i]);
 
-    int point1[] = {10, 19};
-    (search(root, point1))? cout << "Found (" << point1[0] <<"," << point1[1] << ")\n": cout << "Not Found (" << point1[0] <<"," << point1[1] << ")\n";
+    int point1[] = {10, 19, 5};
+    (search(root, point1))? cout << "Found (" << point1[0] <<"," << point1[1] <<"," << point1[2] << ")\n": cout << "Not Found (" << point1[0] <<"," << point1[1] <<"," << point1[2]<< ")\n";
 
-    int point2[] = {12, 19};
-    (search(root, point2))? cout << "Found (" << point2[0] <<"," << point2[1] << ")\n": cout << "Not Found (" << point2[0] <<"," << point2[1] << ")\n";
+    int point2[] = {12, 19, 5};
+    (search(root, point2))? cout << "Found (" << point2[0] <<"," << point2[1] <<"," << point1[2] << ")\n": cout << "Not Found (" << point2[0] <<"," << point2[1] <<"," << point1[2]<< ")\n";
 
-    for (int i=0; i<n; i++)
+    for (int i=0; i<n; i++){
         root = insert(root, points[i]);
-
+        if(i )
+    }
     // Delet (30, 40);
     root = deleteNode(root, points[0]);
 
     cout << "Root after deletion of (30, 40)\n";
-    cout << root->point[0] << ", " << root->point[1] << endl;
+    cout << root->point[0] << ", " << root->point[1] <<"," << root->point1[3] << endl;
 
     return 0;
 }

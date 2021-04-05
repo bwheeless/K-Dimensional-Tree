@@ -7,6 +7,7 @@ The implementation of the K-Dimensional Tree in main was derived from code found
 It is important to note that this data structure is a barebone implementation and contains insertion functionality, find minimum, search, and deletion.
 
 
+# What is a K-Dimensional Tree
 A K-Dimensional Tree (also known as K-D Tree) is a space-partitioning data structure for organizing points in a K-Dimensional space. This data structure acts similar to a binary search tree with each node representing data in the multi dimensional space.
 
 

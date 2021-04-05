@@ -211,15 +211,24 @@ Node* deleteNode(Node *root, int point[])
 // Driver program to test above functions
 int main()
 {
+    //Testing the initialization of a 3-dimensional tree
     struct Node *root = NULL;
     int points[][k] = {{3, 6, 4}, {17, 15, 2}, {13, 15, 7}, {6, 12, 8},
                        {9, 1, 1}, {2, 7, 4}, {10, 19, 5}};
 
     int n = sizeof(points)/sizeof(points[0]);
 
+    //Testing the insertion of points into a 3-dimensional tree.
     for (int i=0; i<n; i++)
         root = insert(root, points[i]);
 
+    //Testing out minimum value in a 3-dimensional tree.
+    struct Node *minVal = NULL;
+    findMin(root, 3);
+    cout << "(" << root->point[0] << "," << root->point[1] <<"," << root->point[3] << ")" << endl;
+
+
+    //Testing the search functionality of a 3-dimensional Tree.
     int point1[] = {10, 19, 5};
     (search(root, point1))? cout << "Found (" << point1[0] <<"," << point1[1] <<"," << point1[2] << ")\n": cout << "Not Found (" << point1[0] <<"," << point1[1] <<"," << point1[2]<< ")\n";
 
@@ -229,13 +238,16 @@ int main()
     for (int i=0; i<n; i++){
         root = insert(root, points[i]);
     }
-    // Delet (30, 40);
+
+    //Testing the delete functionality of a 3-dimensional tree
     struct Node *origRoot = NULL;
     origRoot = root;
     root = deleteNode(root, points[0]);
 
-    cout << "Root after deletion of (" << point2[0] <<"," << point2[1] <<"," << point1[2] << ")\n";
+    cout << "Root after deletion of (" << origRoot->point[0] <<"," << origRoot->point[1] <<"," << origRoot->point[2] << ")\n";
     cout << root->point[0] << "," << root->point[1] <<"," << root->point[3] << endl;
+
+
 
     return 0;
 }

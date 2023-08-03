@@ -132,7 +132,7 @@ Node *findMinRec(Node* root, int d, unsigned depth)
     // in this subtree
     return minNode(root,
                    findMinRec(root->left, d, depth+1),
-                   findMinRec(root->right, d, depth+1), d);
+                   findMinRec(root->right, d, depth+1), cd);
 }
 
 // A wrapper over findMinRec(). Returns minimum of d'th dimension

@@ -225,7 +225,7 @@ int main()
     //Testing out minimum value in a 3-dimensional tree.
     struct Node *minVal = NULL;
     findMin(root, 3);
-    cout << "(" << root->point[0] << "," << root->point[1] <<"," << root->point[3] << ")" << endl;
+    cout << "(" << root->point[0] << "," << root->point[1] <<"," << root->point[2] << ")" << endl;
 
 
     //Testing the search functionality of a 3-dimensional Tree.

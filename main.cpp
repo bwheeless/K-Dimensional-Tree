@@ -245,7 +245,7 @@ int main()
     root = deleteNode(root, points[0]);
 
     cout << "Root after deletion of (" << origRoot->point[0] <<"," << origRoot->point[1] <<"," << origRoot->point[2] << ")\n";
-    cout << root->point[0] << "," << root->point[1] <<"," << root->point[3] << endl;
+    cout << root->point[0] << "," << root->point[1] <<"," << root->point[2] << endl;
 
 
 

@@ -132,7 +132,7 @@ Node *findMinRec(Node* root, int d, unsigned depth)
     // in this subtree
     return minNode(root,
                    findMinRec(root->left, d, depth+1),
-                   findMinRec(root->right, d, depth+1), d);
+                   findMinRec(root->right, d, depth+1), cd);
 }
 
 // A wrapper over findMinRec(). Returns minimum of d'th dimension
@@ -225,7 +225,7 @@ int main()
     //Testing out minimum value in a 3-dimensional tree.
     struct Node *minVal = NULL;
     findMin(root, 3);
-    cout << "(" << root->point[0] << "," << root->point[1] <<"," << root->point[3] << ")" << endl;
+    cout << "(" << root->point[0] << "," << root->point[1] <<"," << root->point[2] << ")" << endl;
 
 
     //Testing the search functionality of a 3-dimensional Tree.
@@ -245,7 +245,7 @@ int main()
     root = deleteNode(root, points[0]);
 
     cout << "Root after deletion of (" << origRoot->point[0] <<"," << origRoot->point[1] <<"," << origRoot->point[2] << ")\n";
-    cout << root->point[0] << "," << root->point[1] <<"," << root->point[3] << endl;
+    cout << root->point[0] << "," << root->point[1] <<"," << root->point[2] << endl;
 
 
 
